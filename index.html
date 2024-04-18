@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Multiplication Table</h1>
+        <p>Enter a number between from 2-10:</p>
+        <input type="number" id="number1" name="num1">
+        by
+        <input type="number" id="number2" name="num2">
+        <br/><br/>
+        <input onclick="checker()" type="button" id="buttonGenerate" value="Generate Table"><br/>
+</body>
+<script>
+
+        function checker(){
+            var x=document.getElementById("number1").value;
+            var y=0;
+            var a=document.getElementById("number2").value;
+            var b=0;
+            var c=0;
+                if(x>10||x<2||a>10||a<2){
+                    alert("bruh");
+                }
+                else{
+                    document.write('<table border="1" cellspacing="1">')
+                    while(y<x){
+                        b=0;
+                        document.write("<tr></tr>");
+                        while(b<a){
+                            document.write("<td>"+((y+1)*(b+1))+"</td>");
+                            b++;
+                        }
+                        y++;
+                    }
+                }
+                
+            }
+</script>
+</html>
